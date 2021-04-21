@@ -1,0 +1,16 @@
+Create main.cpp
+Right-click project -> Properties
+Configuration -> All Configurations, Platform -> x64
+C/C++ -> General -> Additional Include Directories
+Add SDL include folder, click Okay
+Linker -> General -> Additional Library Directories
+Add SDL x64 folder under lib, click Okay
+Linker -> Input -> Additional Dependencies
+Add SDL2.lib, SDL2main.lib, SDL2_mixer.lib by typing them in, click Okay
+Go to SDL/lib/x64 and copy paste SDL2.dll from that folder into the
+folder where main.cpp is located, do the same for everything in
+the folder where SDL2_mixer.dll is located (under lib/x64 for mixer)
+Go to Configuration Manager under Project Properties
+Set Active Solution Platform and Platform to x64
+#include <SDL.h> and #include <SDL_mixer.h> and confirm they work
+write int main(int argc, char *argv[]){} function and test
